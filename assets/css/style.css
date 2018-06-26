@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'FuturaEB';
+    src: url('../fonts/Futura-CondensedExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('../fonts/Futura-CondensedMedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AkzidenzRegular';
+    src: url('../fonts/Berthold Akzidenz Grotesk BE Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AkzidenzBold';
+    src: url('../fonts/Berthold Akzidenz Grotesk Bold.ttf') format('truetype');
+}
+.Futura {
+    font-family: 'Futura';
+}
+.FuturaBold {
+    font-family: 'FuturaEB';
+}
+.FuturaMedium {
+    font-family: 'FuturaMedium';
+}
+.AkzidenzBold {
+    font-family: 'AkzidenzBold';    
+}
+.AkzidenzRegular {
+    font-family: 'AkzidenzRegular';    
+}
+
+h1, h2, h3 {
+    font-family: "Futura";
+    text-transform: uppercase;
+}

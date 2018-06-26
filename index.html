@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Jessie Gomez Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JessieGomez GitPage</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
 </head>
-<body>
-    <h1>You made it to my github page!</h1>
+
+<body style="overflow-y:auto;">
+    <div class="uk-height-large uk-background-cover uk-dark uk-flex" uk-parallax="bgy: -200" style="background-image: url('assets/images/boston_skyline.jpg');height:100vh;width:100vw;">
+
+        <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">JESSIE GOMEZ</h1>
+
+    </div>
+    <div class="uk-section uk-section-secondary" style="background: #eaaa00 !important;">
+        <div class="uk-container">
+            <h2>About Me</h1>
+                <div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
+                    <div>
+                        <p>
+                            Lead Front End Developer at InfinityELS in Provo, Utah and Teaching Assistant at the University of Utah's coding Bootcamp.
+                            Family, Boston sports, and JavaScript are my life. I work with the MERN stack daily, but I am
+                            especially fluent in the front end technologies (React, VanillaJS, JQuery, HTML, CSS3).
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            As a Business Management graduate from BYU-Idaho, I am extremely entrepreneurial. Leadership, effective communication, and
+                            optimism are some of my crowning qualities. My experience as a business owner, manager, and developer
+                            make me a killer asset for any team.
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="uk-section uk-section-default">        
+        <div class="uk-container" id="portfolio">
+                <h1 class="uk-dark">Portfolio</h1>
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center portfolio" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.7" uk-grid>
+                <div>
+                    
+                    <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="alpine" class="uk-card uk-card-default" src="assets/images/AlpineTherapy.png" style="height:150px;" alt=""></a>
+                </div>
+                <div>
+                        <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="bluefrog" class="uk-card uk-card-default" src="assets/images/BlueFrogLoan.png" style="height:150px;" alt=""></a>
+                </div>
+                <div>
+                        <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="blueriver" class="uk-card uk-card-default" src="assets/images/BlueRiverLending.png" style="height:150px;" alt=""></a>
+                </div>
+                 <div>
+                        <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="lendingbear" class="uk-card uk-card-default" src="assets/images/LendingBear.png" alt="" style="height:150px;"></a>                    
+                </div>
+                <div>
+                        <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="plaingreen" class="uk-card uk-card-default" src="assets/images/PlainGreen.png" alt="" style="height:150px;"></a>                                        
+                </div>
+                <div>
+                        <a class="uk-button" target="_blank" uk-toggle="target: #offcanvas-flip" href="#" style="padding:0px;"><img id="speedycash" class="uk-card uk-card-default" src="assets/images/SpeedyCash.png" alt="" style="height:150px;"></a>                                                            
+                </div>
+            </div>
+        </div>
+                <div id="offcanvas-flip" uk-offcanvas="flip: true;">
+                    <div class="uk-offcanvas-bar">
+            
+                        <button class="uk-offcanvas-close" type="button" uk-close></button>
+            
+                        <h3 id="modalTitle">Title</h3>
+            
+                        <p  id="modalDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                        <a href="#" id="modalLink" style="text-decoration:underline;">Visit Site</a>
+                    </div>
+                </div>            
+            </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("a.uk-button").click(function(e){
+        var title;
+        var desc;
+        var link;
+        console.log(e.target);
+
+        //switch statement
+        switch(e.target.id){
+            case "alpine":
+            
+                title = "Alpine Physical Therapy";
+                desc = "In this project I coded and manipulated PHP for loops to display business partners/sponsors and services within a bootstrap grid. In my time as a contractor for Alpine Physical Therapy I was largely responsible for layout, content updates, and code/plugin maintenance.";
+                link = "http://www.alpinept.com";
+                break;
+            case "bluefrog":
+                title = "Blue Frog Loans";
+                desc = "Integrated JSMaps into website to display states of operation and link consumer to region specific information. Utilized date functions along with JQuery to replace content on specific dates to avoid client from falling out of compliance. Used window methods to restyle page depending on changes in the query string.";
+                link = "https://bluefrogloans.com/default.aspx";
+                break;
+            case "blueriver":
+                title = "Blue River Loans";
+                desc = "Wireframed the site using Bootstrap, HTML5, and CSS3. Integrated the bootstrap-slider library for the users convenience of choosing a loan amount. JQuery was used to capture form and loan data and redirect this information to the application page with a get method. On the application page I used ASP.net and C# to post the field values to the database and Vanilla JS to validate the form. ";
+                link = "http://www.blueriverlending.com";                
+                break;
+            case "lendingbear":
+                title = "LendingBear";
+                desc = "Created the buffer page that links the front page short form to the large application page. JQuery and Vanilla JS are used to route customers to stores and loan types, auto-populate input fields, and validate the forms.";
+                link = "https://www.lendingbear.com";
+                break;
+            case "plaingreen":
+                title = "Plain Green";
+                desc = "Used JQuery to build loan calculator on the LoanCost.aspx page. Utilized one way binding to provide live updates to the payment amount total as the customer changes loan amount, payment frequency, and percentages. Added an accordion to the FAQ page using good ‘ol bootstrap. ";
+                link = "https://plaingreenloans.com/LoanCost.aspx";
+                break;
+            case "speedycash":
+                title = "Speedy Cash Canada";
+                desc = "As antiquated as the page may seem/be, it was my very first project with building modals. Using JQuery, HTML5, and CSS3 I made it so individual modals would appear based on the user’s region selection. These modals have the functionality to click and print the information or to redirect the customer to the application. As simple as it is now to make a modal, it is a hurdle I am proud of clearing.";
+                link = "http://www.speedycash.plmsetup.com";
+                break;
+        }
+
+        $("#modalTitle").text(title);
+        $("#modalDesc").text(desc);
+        $("#modalLink").attr('href', link);
+    });
+</script>
 </html>
